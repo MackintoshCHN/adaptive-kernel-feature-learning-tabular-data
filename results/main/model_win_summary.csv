@@ -1,0 +1,4 @@
+task_type,best_model_on_test,num_dataset_wins
+classification,xgboost,2
+regression,random_forest,2
+regression,xrfm,1
