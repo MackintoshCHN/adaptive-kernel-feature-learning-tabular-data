@@ -1,6 +1,0 @@
-,best_training_time_sec,best_training_time_sec,best_training_time_sec,test_inference_time_per_sample_sec,test_inference_time_per_sample_sec,test_inference_time_per_sample_sec,test_rmse,test_rmse,test_rmse
-model_name,random_forest,xgboost,xrfm,random_forest,xgboost,xrfm,random_forest,xgboost,xrfm
-dataset_name,,,,,,,,,
-Ames Housing,0.815249,2.609505,0.02625,0.000248,3e-06,2e-06,21664.212212,19375.387439,17396.077719
-Bike Sharing (hour),6.180935,1.190686,2.015592,2.3e-05,2e-06,8e-06,42.958019,43.676302,49.83651
-Superconductivity,23.460052,1.566453,9.84766,1.8e-05,1e-06,1.7e-05,10.144209,10.325307,10.867733

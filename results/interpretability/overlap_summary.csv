@@ -1,7 +1,0 @@
-comparison,top_k_overlap
-xRFM diagonal vs PCA,3
-xRFM diagonal vs MI,4
-xRFM diagonal vs Permutation,8
-PCA vs MI,5
-PCA vs Permutation,4
-MI vs Permutation,5
