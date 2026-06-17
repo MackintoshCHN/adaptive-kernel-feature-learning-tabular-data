@@ -1,0 +1,6 @@
+dataset_name,task_type,best_model_on_test,best_metric_name,best_metric_value
+Adult (Census Income),classification,xgboost,test_accuracy,0.8766506295424301
+Ames Housing,regression,xrfm,test_rmse,17396.077718842258
+Bank Marketing,classification,xgboost,test_accuracy,0.9096538759261307
+Bike Sharing (hour),regression,random_forest,test_rmse,42.95801920148877
+Superconductivity,regression,random_forest,test_rmse,10.14420898987014

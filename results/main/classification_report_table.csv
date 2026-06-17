@@ -1,0 +1,5 @@
+,best_training_time_sec,best_training_time_sec,best_training_time_sec,test_accuracy,test_accuracy,test_accuracy,test_auc_roc,test_auc_roc,test_auc_roc,test_inference_time_per_sample_sec,test_inference_time_per_sample_sec,test_inference_time_per_sample_sec
+model_name,random_forest,xgboost,xrfm,random_forest,xgboost,xrfm,random_forest,xgboost,xrfm,random_forest,xgboost,xrfm
+dataset_name,,,,,,,,,,,,
+Adult (Census Income),1.375758,0.582448,12.661059,0.868564,0.876651,0.860375,0.917887,0.929081,0.906727,1.1e-05,1e-06,3.8e-05
+Bank Marketing,1.015393,0.507913,20.039546,0.907332,0.909654,0.905341,0.922596,0.930357,0.908631,9e-06,1e-06,5.3e-05

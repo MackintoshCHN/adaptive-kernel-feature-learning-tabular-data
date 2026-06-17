@@ -1,0 +1,16 @@
+dataset_key,dataset_name,task_type,model_name,best_params,best_val_objective
+adult_income,Adult (Census Income),classification,random_forest,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 2}",0.8635339885339886
+adult_income,Adult (Census Income),classification,xgboost,"{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}",0.8747952497952498
+adult_income,Adult (Census Income),classification,xrfm,"{'bandwidth': 50.0, 'exponent': 1.0, 'kernel': 'l1', 'diag': False, 'reg': 0.01, 'iters': 5, 'max_leaf_size': 5000, 'n_trees': 1}",0.8627149877149877
+bank_marketing,Bank Marketing,classification,random_forest,"{'n_estimators': 200, 'max_depth': None, 'min_samples_leaf': 1}",0.9053306790533068
+bank_marketing,Bank Marketing,classification,xgboost,"{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}",0.9072107940721079
+bank_marketing,Bank Marketing,classification,xrfm,"{'bandwidth': 200.0, 'exponent': 1.0, 'kernel': 'l1', 'diag': False, 'reg': 0.005, 'iters': 5, 'max_leaf_size': 30000, 'n_trees': 1}",0.9065472240654723
+ames_housing,Ames Housing,regression,random_forest,"{'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 2}",36910.08312176703
+ames_housing,Ames Housing,regression,xgboost,"{'n_estimators': 200, 'max_depth': 4, 'learning_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}",34267.583006216344
+ames_housing,Ames Housing,regression,xrfm,"{'bandwidth': 20.0, 'exponent': 1.0, 'kernel': 'l2', 'diag': True, 'reg': 0.005, 'iters': 3, 'max_leaf_size': 1000, 'n_trees': 3}",39201.8040401204
+bike_sharing_hour,Bike Sharing (hour),regression,random_forest,"{'n_estimators': 200, 'max_depth': None, 'min_samples_leaf': 1}",41.30665402633413
+bike_sharing_hour,Bike Sharing (hour),regression,xgboost,"{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}",42.71918252454327
+bike_sharing_hour,Bike Sharing (hour),regression,xrfm,"{'bandwidth': 20.0, 'exponent': 1.0, 'kernel': 'l2', 'diag': True, 'reg': 0.01, 'iters': 2, 'max_leaf_size': 512, 'n_trees': 1}",46.84594933129224
+superconductivity,Superconductivity,regression,random_forest,"{'n_estimators': 200, 'max_depth': None, 'min_samples_leaf': 1}",9.230136096059894
+superconductivity,Superconductivity,regression,xgboost,"{'n_estimators': 300, 'max_depth': 6, 'learning_rate': 0.05, 'subsample': 0.8, 'colsample_bytree': 0.8}",9.47409702801611
+superconductivity,Superconductivity,regression,xrfm,"{'bandwidth': 20.0, 'exponent': 1.0, 'kernel': 'l1', 'diag': False, 'reg': 0.01, 'iters': 3, 'max_leaf_size': 2000, 'n_trees': 5}",10.215273951266019
