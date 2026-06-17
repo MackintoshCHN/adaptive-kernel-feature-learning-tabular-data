@@ -20,6 +20,8 @@ The project evaluates the models across multiple datasets, task types, and analy
 * scaling behaviour with increasing training size
 * residual-weighted AGOP as an exploratory method extension
 
+![Main Test Performance Summary](figures/main_test_performance_summary.png)
+
 ## Dataset Coverage
 
 The main comparison uses **5 tabular datasets** covering both classification and regression tasks.
@@ -106,8 +108,7 @@ The workflow retrieves the validation-selected xRFM model and inspects its fitte
 
 The interpretability workflow includes:
 
-* local leaf-level xRFM diagonal feature scores
-* global averaged xRFM diagonal feature-activity ranking
+* xRFM diagonal feature-activity ranking
 * PCA loading-based importance
 * mutual information importance
 * permutation importance
@@ -116,6 +117,10 @@ The interpretability workflow includes:
 * consensus and divergence feature summaries
 
 This provides multiple views of feature importance and helps compare xRFM-specific feature activity with more standard interpretability methods.
+
+![Top xRFM Feature Activity](figures/agop_top15_features.png)
+
+![Interpretability Consensus Features](figures/interpretability_consensus_features.png)
 
 ## Scaling Analysis
 
@@ -167,47 +172,43 @@ The project saves outputs into structured folders.
 
 ### Main result files
 
-| File                              | Description                         |
-| --------------------------------- | ----------------------------------- |
-| `full_results_clean.csv`          | Cleaned full model comparison table |
-| `regression_report_table.csv`     | Regression result summary           |
-| `classification_report_table.csv` | Classification result summary       |
-| `selected_model_parameters.csv`   | Validation-selected parameters      |
-| `best_model_by_dataset.csv`       | Best model summary by dataset       |
-| `model_win_summary.csv`           | Model win-count summary             |
-
-### Interpretability files
-
-| File                              | Description                                         |
-| --------------------------------- | --------------------------------------------------- |
-| `agop_matrix_summary.csv`         | Extracted xRFM matrix summary                       |
-| `agop_leaf_long.csv`              | Leaf-level xRFM feature scores                      |
-| `agop_aggregated_importance.csv`  | Global xRFM diagonal feature ranking                |
-| `other_importance_methods.csv`    | PCA, mutual information, and permutation importance |
-| `interpretability_comparison.csv` | Cross-method rank comparison                        |
-| `consensus_top_features.csv`      | Consensus feature summary                           |
-| `divergence_top_features.csv`     | High-disagreement feature summary                   |
-| `overlap_summary.csv`             | Top-k overlap summary                               |
+| File                                           | Description                         |
+| ---------------------------------------------- | ----------------------------------- |
+| `results/main/full_results_clean.csv`          | Cleaned full model comparison table |
+| `results/main/regression_report_table.csv`     | Regression result summary           |
+| `results/main/classification_report_table.csv` | Classification result summary       |
+| `results/main/selected_model_parameters.csv`   | Validation-selected parameters      |
+| `results/main/best_model_by_dataset.csv`       | Best model summary by dataset       |
+| `results/main/model_win_summary.csv`           | Model win-count summary             |
 
 ### Scaling files
 
-| File                        | Description                      |
-| --------------------------- | -------------------------------- |
-| `scaling_summary_table.csv` | Long-format scaling result table |
-| `scaling_pivot_table.csv`   | Side-by-side scaling comparison  |
-| `scaling_results_final.csv` | Cleaned final scaling results    |
+| File                                        | Description                      |
+| ------------------------------------------- | -------------------------------- |
+| `results/scaling/scaling_summary_table.csv` | Long-format scaling result table |
+| `results/scaling/scaling_pivot_table.csv`   | Side-by-side scaling comparison  |
+| `results/scaling/scaling_results_final.csv` | Cleaned final scaling results    |
+
+### Interpretability files
+
+| File                                                       | Description                       |
+| ---------------------------------------------------------- | --------------------------------- |
+| `results/interpretability/interpretability_comparison.csv` | Cross-method rank comparison      |
+| `results/interpretability/consensus_top_features.csv`      | Consensus feature summary         |
+| `results/interpretability/divergence_top_features.csv`     | High-disagreement feature summary |
+| `results/interpretability/overlap_summary.csv`             | Top-k overlap summary             |
 
 ### Figure files
 
-| File                                      | Description                                   |
-| ----------------------------------------- | --------------------------------------------- |
-| `main_test_performance_summary.png`       | Main model performance heatmap                |
-| `scaling_accuracy_vs_n.png`               | Accuracy scaling curve                        |
-| `scaling_auc_vs_n.png`                    | AUC-ROC scaling curve                         |
-| `scaling_training_time_vs_n.png`          | Training-time scaling curve                   |
-| `agop_top15_features.png`                 | Top xRFM diagonal feature-activity scores     |
-| `interpretability_consensus_features.png` | Cross-method consensus feature plot           |
-| `residual_weighted_agop.png`              | Standard vs residual-weighted AGOP comparison |
+| File                                              | Description                                   |
+| ------------------------------------------------- | --------------------------------------------- |
+| `figures/main_test_performance_summary.png`       | Main model performance heatmap                |
+| `figures/scaling_accuracy_vs_n.png`               | Accuracy scaling curve                        |
+| `figures/scaling_auc_vs_n.png`                    | AUC-ROC scaling curve                         |
+| `figures/scaling_training_time_vs_n.png`          | Training-time scaling curve                   |
+| `figures/agop_top15_features.png`                 | Top xRFM diagonal feature-activity scores     |
+| `figures/interpretability_consensus_features.png` | Cross-method consensus feature plot           |
+| `figures/residual_weighted_agop.png`              | Standard vs residual-weighted AGOP comparison |
 
 ## Repository Structure
 
@@ -216,6 +217,7 @@ adaptive-kernel-feature-learning-tabular-data/
 ├── README.md
 ├── Adaptive_Kernel_Feature_Learning_for_Tabular_Data.ipynb
 ├── requirements.txt
+├── .gitignore
 ├── figures/
 │   ├── main_test_performance_summary.png
 │   ├── scaling_accuracy_vs_n.png
@@ -224,27 +226,33 @@ adaptive-kernel-feature-learning-tabular-data/
 │   ├── agop_top15_features.png
 │   ├── interpretability_consensus_features.png
 │   └── residual_weighted_agop.png
-├── results/
-│   ├── full_results_clean.csv
-│   ├── regression_report_table.csv
-│   ├── classification_report_table.csv
-│   ├── selected_model_parameters.csv
-│   ├── best_model_by_dataset.csv
-│   ├── model_win_summary.csv
-│   ├── scaling/
-│   ├── interpretability/
-│   └── residual_weighted_agop_extension/
-└── saved_models/
+└── results/
+    ├── main/
+    │   ├── best_model_by_dataset.csv
+    │   ├── classification_report_table.csv
+    │   ├── full_results_clean.csv
+    │   ├── model_win_summary.csv
+    │   ├── regression_report_table.csv
+    │   └── selected_model_parameters.csv
+    ├── scaling/
+    │   ├── scaling_pivot_table.csv
+    │   ├── scaling_results_final.csv
+    │   └── scaling_summary_table.csv
+    └── interpretability/
+        ├── consensus_top_features.csv
+        ├── divergence_top_features.csv
+        ├── interpretability_comparison.csv
+        └── overlap_summary.csv
 ```
 
 ## How to Run
 
 The notebook was developed in Google Colab.
 
-Install the main dependencies:
+Install the dependencies:
 
 ```bash
-pip install xrfm xgboost lightgbm "scikit-learn>=1.2,<1.9" pandas numpy matplotlib seaborn ucimlrepo
+pip install -r requirements.txt
 ```
 
 Then open and run:
