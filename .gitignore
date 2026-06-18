@@ -216,3 +216,45 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific files
+
+data/
+raw_data/
+processed_data/
+datasets/
+
+# Model artifacts and large binary outputs
+
+saved_models/
+models/
+checkpoints/
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.h5
+*.pt
+*.pth
+*.ckpt
+
+# Local notebook backups and temporary cleaned copies
+
+*_original.ipynb
+*_backup.ipynb
+*_clean.ipynb
+*_fixed.ipynb
+
+# Local cleaning/helper scripts
+
+clean_notebook_keep_outputs.py
+clean_notebook_metadata.py
+clean_notebook.py
+
+# Local temporary files
+
+tmp/
+temp/
+*.tmp
+*.bak
