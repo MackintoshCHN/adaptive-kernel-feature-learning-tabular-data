@@ -281,7 +281,7 @@ The notebook will:
 * PyTorch
 * xRFM
 * XGBoost
-* LightGBM
+* Random Forest
 * Matplotlib
 * Seaborn
 * UCI ML Repository API
@@ -306,7 +306,7 @@ Future extensions could include:
 * broader hyperparameter search
 * repeated scaling runs with multiple random subsamples
 * testing residual-weighted AGOP on real datasets
-* adding LightGBM to the main comparison
+* adding LightGBM as an additional tuned baseline
 * comparing with other tabular models such as TabPFN
 * deeper AGOP eigenvector analysis
 
