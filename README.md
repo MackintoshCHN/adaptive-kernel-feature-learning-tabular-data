@@ -325,7 +325,7 @@ Future extensions could include:
 * deeper AGOP eigenvector analysis
 * comparing AGOP-based feature importance with SHAP and tree-based feature importance
 
-## References
+## References and Resources
 
 This project builds on the xRFM framework proposed for scalable and interpretable feature learning on tabular data:
 
@@ -337,13 +337,19 @@ The AGOP-based feature learning idea is based on Recursive Feature Machines:
 * Radhakrishnan, A., Beaglehole, D., Pandit, P., & Belkin, M. (2024). *Mechanism for feature learning in neural networks and backpropagation-free machine learning models*. Science, 383(6690), 1461–1467. https://www.science.org/doi/10.1126/science.adi5639
 * RFM arXiv version: https://arxiv.org/abs/2212.13881
 
-Dataset sources:
+Dataset sources used in this notebook:
 
 * Adult Income: https://archive.ics.uci.edu/dataset/2/adult
 * Bank Marketing: https://archive.ics.uci.edu/dataset/222/bank+marketing
 * Superconductivity: https://archive.ics.uci.edu/dataset/464/superconductivty+data
 * Bike Sharing: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 * Ames Housing: https://github.com/wblakecannon/ames/blob/master/data/housing.csv
+
+Additional documentation:
+
+* XGBoost documentation: https://xgboost.readthedocs.io/en/stable/
+* scikit-learn documentation: https://scikit-learn.org/stable/
+* UCI Machine Learning Repository API: https://pypi.org/project/ucimlrepo/
 
 Additional tools and libraries used in this project include xRFM, XGBoost, scikit-learn, pandas, NumPy, PyTorch, Matplotlib, Seaborn, and the UCI Machine Learning Repository API.
 
