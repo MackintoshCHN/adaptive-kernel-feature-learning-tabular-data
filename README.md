@@ -24,7 +24,7 @@ The project evaluates the models across multiple datasets, task types, and analy
 
 ## Dataset Coverage
 
-The main comparison uses **5 tabular datasets** covering both classification and regression tasks.
+The main comparison uses **5 public tabular datasets** covering both classification and regression tasks.
 
 | Dataset           | Task Type      | Main Role                                                   |
 | ----------------- | -------------- | ----------------------------------------------------------- |
@@ -41,6 +41,20 @@ The dataset selection provides coverage across:
 * large-sample settings
 * high-dimensional feature spaces
 * mixed numerical and categorical features
+
+## Data Sources
+
+The datasets are loaded programmatically in the notebook rather than stored directly in this repository.
+
+| Dataset           | Source                          | Loading Method          |
+| ----------------- | ------------------------------- | ----------------------- |
+| Adult Income      | UCI Machine Learning Repository | `fetch_ucirepo(id=2)`   |
+| Bank Marketing    | UCI Machine Learning Repository | `fetch_ucirepo(id=222)` |
+| Superconductivity | UCI Machine Learning Repository | `fetch_ucirepo(id=464)` |
+| Bike Sharing      | UCI Machine Learning Repository | `fetch_ucirepo(id=275)` |
+| Ames Housing      | Public GitHub-hosted CSV        | `pandas.read_csv()`     |
+
+Generated processed arrays and raw split files are saved locally under `data/processed/` when the notebook is run. These generated data files are not committed to the repository.
 
 ## Methodology
 
@@ -264,7 +278,7 @@ Adaptive_Kernel_Feature_Learning_for_Tabular_Data.ipynb
 The notebook will:
 
 1. set up the environment
-2. load the datasets
+2. load the datasets programmatically
 3. preprocess all datasets
 4. train and tune the models
 5. save result tables
@@ -284,7 +298,7 @@ The notebook will:
 * Random Forest
 * Matplotlib
 * Seaborn
-* UCI ML Repository API
+* UCI Machine Learning Repository API
 
 ## Project Highlights
 
@@ -309,6 +323,19 @@ Future extensions could include:
 * adding LightGBM as an additional tuned baseline
 * comparing with other tabular models such as TabPFN
 * deeper AGOP eigenvector analysis
+* comparing AGOP-based feature importance with SHAP and tree-based feature importance
+
+## References
+
+This project builds on the xRFM framework proposed for scalable and interpretable feature learning on tabular data:
+
+* Beaglehole, D., Holzmüller, D., Radhakrishnan, A., & Belkin, M. (2025). *xRFM: Accurate, scalable, and interpretable feature learning models for tabular data*. arXiv:2508.10053.
+
+The AGOP-based feature learning idea is based on Recursive Feature Machines:
+
+* Radhakrishnan, A., Beaglehole, D., Pandit, P., & Belkin, M. (2024). *Mechanism for feature learning in neural networks and backpropagation-free machine learning models*. Science, 383(6690), 1461–1467.
+
+Additional tools and libraries used in this project include xRFM, XGBoost, scikit-learn, pandas, NumPy, PyTorch, Matplotlib, Seaborn, and the UCI Machine Learning Repository API.
 
 ## Summary
 
