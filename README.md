@@ -46,13 +46,13 @@ The dataset selection provides coverage across:
 
 The datasets are loaded programmatically in the notebook rather than stored directly in this repository.
 
-| Dataset           | Source                          | Loading Method          |
-| ----------------- | ------------------------------- | ----------------------- |
-| Adult Income      | UCI Machine Learning Repository | `fetch_ucirepo(id=2)`   |
-| Bank Marketing    | UCI Machine Learning Repository | `fetch_ucirepo(id=222)` |
-| Superconductivity | UCI Machine Learning Repository | `fetch_ucirepo(id=464)` |
-| Bike Sharing      | UCI Machine Learning Repository | `fetch_ucirepo(id=275)` |
-| Ames Housing      | Public GitHub-hosted CSV        | `pandas.read_csv()`     |
+| Dataset           | Source                                                                                         | Loading Method          |
+| ----------------- | ---------------------------------------------------------------------------------------------- | ----------------------- |
+| Adult Income      | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/2/adult                   | `fetch_ucirepo(id=2)`   |
+| Bank Marketing    | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/222/bank+marketing        | `fetch_ucirepo(id=222)` |
+| Superconductivity | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/464/superconductivty+data | `fetch_ucirepo(id=464)` |
+| Bike Sharing      | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset  | `fetch_ucirepo(id=275)` |
+| Ames Housing      | Public GitHub-hosted CSV: https://github.com/wblakecannon/ames/blob/master/data/housing.csv    | `pandas.read_csv()`     |
 
 Generated processed arrays and raw split files are saved locally under `data/processed/` when the notebook is run. These generated data files are not committed to the repository.
 
@@ -329,11 +329,21 @@ Future extensions could include:
 
 This project builds on the xRFM framework proposed for scalable and interpretable feature learning on tabular data:
 
-* Beaglehole, D., Holzmüller, D., Radhakrishnan, A., & Belkin, M. (2025). *xRFM: Accurate, scalable, and interpretable feature learning models for tabular data*. arXiv:2508.10053.
+* Beaglehole, D., Holzmüller, D., Radhakrishnan, A., & Belkin, M. (2025). *xRFM: Accurate, scalable, and interpretable feature learning models for tabular data*. arXiv:2508.10053. https://arxiv.org/abs/2508.10053
+* Official xRFM GitHub repository: https://github.com/dmbeaglehole/xRFM
 
 The AGOP-based feature learning idea is based on Recursive Feature Machines:
 
-* Radhakrishnan, A., Beaglehole, D., Pandit, P., & Belkin, M. (2024). *Mechanism for feature learning in neural networks and backpropagation-free machine learning models*. Science, 383(6690), 1461–1467.
+* Radhakrishnan, A., Beaglehole, D., Pandit, P., & Belkin, M. (2024). *Mechanism for feature learning in neural networks and backpropagation-free machine learning models*. Science, 383(6690), 1461–1467. https://www.science.org/doi/10.1126/science.adi5639
+* RFM arXiv version: https://arxiv.org/abs/2212.13881
+
+Dataset sources:
+
+* Adult Income: https://archive.ics.uci.edu/dataset/2/adult
+* Bank Marketing: https://archive.ics.uci.edu/dataset/222/bank+marketing
+* Superconductivity: https://archive.ics.uci.edu/dataset/464/superconductivty+data
+* Bike Sharing: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
+* Ames Housing: https://github.com/wblakecannon/ames/blob/master/data/housing.csv
 
 Additional tools and libraries used in this project include xRFM, XGBoost, scikit-learn, pandas, NumPy, PyTorch, Matplotlib, Seaborn, and the UCI Machine Learning Repository API.
 
