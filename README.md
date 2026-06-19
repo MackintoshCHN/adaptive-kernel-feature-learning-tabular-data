@@ -47,13 +47,13 @@ The dataset selection provides coverage across:
 
 The datasets are loaded programmatically in the notebook rather than stored directly in this repository.
 
-| Dataset           | Source                                                                                                                                                                                                                                       | Loading Method          |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Adult Income      | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/2/adult                                                                                                                                                                 | `fetch_ucirepo(id=2)`   |
-| Bank Marketing    | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/222/bank+marketing                                                                                                                                                      | `fetch_ucirepo(id=222)` |
-| Superconductivity | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/464/superconductivty+data                                                                                                                                               | `fetch_ucirepo(id=464)` |
-| Bike Sharing      | UCI Machine Learning Repository: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset                                                                                                                                                | `fetch_ucirepo(id=275)` |
-| Ames Housing      | Public GitHub-hosted CSV sources used by the notebook: `https://raw.githubusercontent.com/eddiexunyc/DATA605_FINAL/main/Resources/train.csv` and `https://raw.githubusercontent.com/chriskhanhtran/kaggle-house-price/master/Data/train.csv` | `pandas.read_csv()`     |
+| Dataset           | Source                                                                                                                                                                                                                                                                                              | Loading Method          |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| Adult Income      | [UCI Machine Learning Repository: Adult](https://archive.ics.uci.edu/dataset/2/adult)                                                                                                                                                                                                               | `fetch_ucirepo(id=2)`   |
+| Bank Marketing    | [UCI Machine Learning Repository: Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing)                                                                                                                                                                                           | `fetch_ucirepo(id=222)` |
+| Superconductivity | [UCI Machine Learning Repository: Superconductivity](https://archive.ics.uci.edu/dataset/464/superconductivty+data)                                                                                                                                                                                 | `fetch_ucirepo(id=464)` |
+| Bike Sharing      | [UCI Machine Learning Repository: Bike Sharing](https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset)                                                                                                                                                                                       | `fetch_ucirepo(id=275)` |
+| Ames Housing      | Public GitHub-hosted CSV sources used by the notebook: [DATA605_FINAL train.csv](https://raw.githubusercontent.com/eddiexunyc/DATA605_FINAL/main/Resources/train.csv) and [kaggle-house-price train.csv](https://raw.githubusercontent.com/chriskhanhtran/kaggle-house-price/master/Data/train.csv) | `pandas.read_csv()`     |
 
 Generated processed arrays and raw split files are saved locally under `data/processed/` when the notebook is run. These generated data files are not committed to the repository.
 
@@ -366,14 +366,14 @@ The AGOP-based feature learning idea is based on Recursive Feature Machines:
 
 Dataset sources used in this notebook:
 
-* Adult Income: https://archive.ics.uci.edu/dataset/2/adult
-* Bank Marketing: https://archive.ics.uci.edu/dataset/222/bank+marketing
-* Superconductivity: https://archive.ics.uci.edu/dataset/464/superconductivty+data
-* Bike Sharing: https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
+* Adult Income: [UCI Adult](https://archive.ics.uci.edu/dataset/2/adult)
+* Bank Marketing: [UCI Bank Marketing](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+* Superconductivity: [UCI Superconductivity](https://archive.ics.uci.edu/dataset/464/superconductivty+data)
+* Bike Sharing: [UCI Bike Sharing](https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset)
 * Ames Housing:
 
-  * https://raw.githubusercontent.com/eddiexunyc/DATA605_FINAL/main/Resources/train.csv
-  * https://raw.githubusercontent.com/chriskhanhtran/kaggle-house-price/master/Data/train.csv
+  * [DATA605_FINAL train.csv](https://raw.githubusercontent.com/eddiexunyc/DATA605_FINAL/main/Resources/train.csv)
+  * [kaggle-house-price train.csv](https://raw.githubusercontent.com/chriskhanhtran/kaggle-house-price/master/Data/train.csv)
 
 Additional documentation:
 
