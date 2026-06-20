@@ -57,7 +57,7 @@ The datasets are loaded programmatically in the notebook rather than stored dire
 
 Generated processed arrays and raw split files are saved locally under `data/processed/` when the notebook is run. These generated data files are not committed to the repository.
 
-External datasets remain subject to their original access terms, licenses, and citation requirements.
+External datasets remain subject to their original access terms, licenses, and citation requirements. For the Ames Housing CSV mirrors used in the notebook, users should verify the original dataset terms before reuse.
 
 ## Methodology
 
@@ -187,6 +187,8 @@ The residual-weighted version gives more influence to samples with larger predic
 
 The project saves outputs into structured folders.
 
+The CSV files under `results/` are generated summary outputs from completed experiments, not redistributed raw datasets.
+
 ### Main result files
 
 | File                                           | Description                         |
@@ -231,10 +233,6 @@ The project saves outputs into structured folders.
 
 ```text
 adaptive-kernel-feature-learning-tabular-data/
-├── README.md
-├── Adaptive_Kernel_Feature_Learning_for_Tabular_Data.ipynb
-├── requirements.txt
-├── .gitignore
 ├── figures/
 │   ├── main_test_performance_summary.png
 │   ├── scaling_accuracy_vs_n.png
@@ -243,23 +241,27 @@ adaptive-kernel-feature-learning-tabular-data/
 │   ├── agop_top15_features.png
 │   ├── interpretability_consensus_features.png
 │   └── residual_weighted_agop.png
-└── results/
-    ├── main/
-    │   ├── best_model_by_dataset.csv
-    │   ├── classification_report_table.csv
-    │   ├── full_results_clean.csv
-    │   ├── model_win_summary.csv
-    │   ├── regression_report_table.csv
-    │   └── selected_model_parameters.csv
-    ├── scaling/
-    │   ├── scaling_pivot_table.csv
-    │   ├── scaling_results_final.csv
-    │   └── scaling_summary_table.csv
-    └── interpretability/
-        ├── consensus_top_features.csv
-        ├── divergence_top_features.csv
-        ├── interpretability_comparison.csv
-        └── overlap_summary.csv
+├── results/
+│   ├── main/
+│   │   ├── best_model_by_dataset.csv
+│   │   ├── classification_report_table.csv
+│   │   ├── full_results_clean.csv
+│   │   ├── model_win_summary.csv
+│   │   ├── regression_report_table.csv
+│   │   └── selected_model_parameters.csv
+│   ├── scaling/
+│   │   ├── scaling_pivot_table.csv
+│   │   ├── scaling_results_final.csv
+│   │   └── scaling_summary_table.csv
+│   └── interpretability/
+│       ├── consensus_top_features.csv
+│       ├── divergence_top_features.csv
+│       ├── interpretability_comparison.csv
+│       └── overlap_summary.csv
+├── .gitignore
+├── Adaptive_Kernel_Feature_Learning_for_Tabular_Data.ipynb
+├── README.md
+└── requirements.txt
 ```
 
 ## Execution Environment
@@ -347,6 +349,8 @@ Future extensions could include:
 Raw datasets are not redistributed in this repository. Dataset loading is handled programmatically or through external public sources used by the notebook.
 
 Generated processed datasets, local split files, model checkpoints, and raw dataset archives are not included in this repository.
+
+The CSV files under `results/` are generated experiment summaries and should not be treated as substitutes for the original datasets.
 
 External datasets, libraries, and models remain governed by their original licenses, access terms, and citation requirements.
 
