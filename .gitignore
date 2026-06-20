@@ -55,36 +55,6 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
-
-*.mo
-*.pot
-
-# Django stuff
-
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff
-
-instance/
-.webassets-cache/
-
-# Scrapy stuff
-
-.scrapy/
-
-# Sphinx documentation
-
-docs/_build/
-
-# PyBuilder
-
-.pybuilder/
-target/
-
 # Jupyter Notebook
 
 .ipynb_checkpoints/
@@ -94,69 +64,7 @@ target/
 profile_default/
 ipython_config.py
 
-# pyenv
-
-# .python-version
-
-# pipenv
-
-# Pipfile.lock
-
-# UV
-
-# uv.lock
-
-# poetry
-
-# poetry.lock
-
-# poetry.toml
-
-# pdm
-
-# pdm.lock
-
-# pdm.toml
-
-.pdm-python
-.pdm-build/
-
-# pixi
-
-# pixi.lock
-
-.pixi/
-
-# PEP 582
-
-**pypackages**/
-
-# Celery
-
-celerybeat-schedule
-celerybeat.pid
-
-# Redis
-
-*.rdb
-*.aof
-*.pid
-
-# RabbitMQ
-
-mnesia/
-rabbitmq/
-rabbitmq-data/
-
-# ActiveMQ
-
-activemq-data/
-
-# SageMath parsed files
-
-*.sage.py
-
-# Environments
+# Virtual environments
 
 .env
 .envrc
@@ -167,58 +75,44 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Package managers and local environments
 
-.spyderproject
-.spyproject
+Pipfile.lock
+poetry.lock
+poetry.toml
+pdm.lock
+pdm.toml
+.pdm-python
+.pdm-build/
+pixi.lock
+.pixi/
+uv.lock
+**pypackages**/
 
-# Rope project settings
-
-.ropeproject
-
-# mkdocs documentation
-
-/site/
-
-# mypy
+# Type checkers and linters
 
 .mypy_cache/
 .dmypy.json
 dmypy.json
-
-# Pyre type checker
-
 .pyre/
-
-# pytype static type analyzer
-
 .pytype/
-
-# Cython debug symbols
-
-cython_debug/
-
-# PyCharm
-
-# .idea/
-
-# Abstra
-
-.abstra/
-
-# Visual Studio Code
-
-# .vscode/
-
-tempCodeRunnerFile.py
-
-# Ruff
-
 .ruff_cache/
 
-# PyPI configuration file
+# Documentation builds
 
-.pypirc
+docs/_build/
+/site/
+
+# Framework and tool caches
+
+.scrapy/
+.webassets-cache/
+.pybuilder/
+target/
+.ropeproject
+.spyderproject
+.spyproject
+.abstra/
 
 # Marimo
 
@@ -230,7 +124,26 @@ marimo/_lsp/
 
 .streamlit/secrets.toml
 
-# Operating system files
+# Logs and local databases
+
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Queue / service files
+
+celerybeat-schedule
+celerybeat.pid
+*.rdb
+*.aof
+*.pid
+mnesia/
+rabbitmq/
+rabbitmq-data/
+activemq-data/
+
+# OS files
 
 .DS_Store
 Thumbs.db
@@ -257,6 +170,15 @@ checkpoints/
 *.pth
 *.ckpt
 
+# Generated archives and exports
+
+*.zip
+*.tar
+*.tar.gz
+*.7z
+exports/
+artifacts/
+
 # Local notebook backups and temporary cleaned copies
 
 *_original.ipynb
@@ -276,3 +198,4 @@ tmp/
 temp/
 *.tmp
 *.bak
+tempCodeRunnerFile.py
